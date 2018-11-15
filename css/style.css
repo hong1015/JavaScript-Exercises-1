@@ -1,0 +1,12 @@
+body{
+    align-items: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+.guessArea{
+    text-align: center;
+}
+.reStart{
+    display: none;
+}
