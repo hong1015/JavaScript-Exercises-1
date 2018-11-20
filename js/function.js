@@ -13,7 +13,7 @@ let playerArr = [];
 
 console.log(randomNo);
 
-const btnEndGame = () =>{
+const btnEndGame = () => {
     chechBtn.style.display = 'none'
     reStartBtn.style.display = 'block'
 }
@@ -22,7 +22,6 @@ const checkNumber = () => {
     if (playerInput.value  == randomNo){
         btnEndGame();
         return 'Correct'
-      
     } else if (playerInput.value > randomNo) {
         return 'too high';
     } else {
@@ -36,11 +35,10 @@ const storPlayerGuess = () => {
 };
 
 const displayPlayerGuess = (arr) => {
-
-    const para = document.createElement('p');
-    para.textContent = arr;
-    // destoryhtml(restuleNo);
-    // restuleNo.appendChild(para); 
+    const resultNoP = document.createElement('p');
+    resultNoP.textContent = arr;
+     destoryhtml(restuleNo);
+     restuleNo.appendChild(resultNoP); 
 };
 
 const destoryhtml = (parent) =>{
@@ -59,7 +57,7 @@ const createResultTxt = () => {
 
 
 const limitActionToTen = () =>{
-    if(counter < 5){
+    if(counter < 10){
         storPlayerGuess();
         displayPlayerGuess(playerArr);
         createResultTxt();
